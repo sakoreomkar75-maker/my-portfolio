@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS Dhoni Portfolio</title>
+</head>
+
+<body style="margin:0; font-family: Arial, sans-serif; background:#0f172a; color:#e2e8f0; scroll-behavior:smooth;">
+
+<!-- NAVBAR -->
+<div style="position:fixed; top:0; width:100%; background:#020617; padding:15px; text-align:center; z-index:1000;">
+    <a href="#home" style="margin:0 15px; color:#38bdf8; text-decoration:none;">Home</a>
+    <a href="#career" style="margin:0 15px; color:#38bdf8; text-decoration:none;">Career</a>
+    <a href="#finisher" style="margin:0 15px; color:#38bdf8; text-decoration:none;">Finisher</a>
+    <a href="#business" style="margin:0 15px; color:#38bdf8; text-decoration:none;">Business</a>
+</div>
+
+<!-- HEADER -->
+<div id="home" class="section" style="padding-top:80px; text-align:center;">
+    <h1 style="color:#38bdf8;">MS Dhoni</h1>
+    <p>The Legacy of Captain Cool</p>
+
+    <div class="img-box">
+        <img src="thala.jpeg">
+    </div>
+</div>
+
+<!-- INTRO -->
+<div class="section">
+    <h2>Introduction</h2>
+    <p>
+        MS Dhoni is one of the greatest captains in cricket history.
+        Known for his calm mindset and leadership.
+    </p>
+</div>
+
+<!-- CAREER -->
+<div id="career" class="section" style="background:#1e293b;">
+    <h2>Career Highlights</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="img-box"><img src="2007t20.jpg"></div>
+            <p>2007 T20 World Cup</p>
+        </div>
+
+        <div class="card">
+            <div class="img-box"><img src="2011worldcup.jpeg"></div>
+            <p>2011 ODI World Cup</p>
+        </div>
+
+        <div class="card">
+            <div class="img-box"><img src="2013champions.jpeg"></div>
+            <p>2013 Champions Trophy</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- FINISHER -->
+<div id="finisher" class="section">
+    <h2>The Finisher</h2>
+
+    <div class="grid">
+        <div>
+            <p>
+                Known as one of the best finishers.
+                His helicopter shot made him iconic.
+            </p>
+        </div>
+
+        <div class="img-box large">
+            <img src="finisher1.jpeg">
+        </div>
+    </div>
+</div>
+
+<!-- BUSINESS -->
+<div id="business" class="section" style="background:#1e293b;">
+    <h2>Business & Investments</h2>
+
+    <ul>
+        <li>Garuda Aerospace</li>
+        <li>Khatabook</li>
+        <li>CARS24</li>
+        <li>EMotorad</li>
+    </ul>
+
+    <div class="img-box large">
+        <img src="company.jpeg">
+    </div>
+</div>
+
+<!-- LEGACY -->
+<div class="section">
+    <h2>Legacy</h2>
+
+    <p>
+        Inspired millions and changed Indian cricket.
+    </p>
+
+    <div class="img-box large">
+        <img src="cool.jpeg">
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div style="text-align:center; padding:20px; background:#020617;">
+    <p>Created by Your Name</p>
+</div>
+
+<!-- INLINE CSS -->
+<style>
+
+.section {
+    padding: 60px 10%;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* IMAGE BOX */
+.img-box {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.img-box.large {
+    width: 100%;
+    height: 250px;
+}
+
+/* IMAGE STYLE */
+.img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s;
+}
+
+/* HOVER ZOOM */
+.img-box:hover img {
+    transform: scale(1.2);
+}
+
+</style>
+
+<!-- ANIMATION SCRIPT -->
+<script>
+
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            sec.classList.add('show');
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
